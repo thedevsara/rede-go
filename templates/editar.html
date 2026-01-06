@@ -1,0 +1,28 @@
+{{define "content"}}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 p-4 mt-5">
+            <h2 class="fw-bold mb-4 text-center text-primary">Editar Postagem</h2>
+            
+            <form action="/editar?id={{.}}" method="POST">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Seu Nome</label>
+                    <input type="text" name="nome" class="form-control form-control-lg" placeholder="Altere seu nome" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Mensagem</label>
+                    <textarea name="mensagem" class="form-control" rows="5" placeholder="Escreva o novo conteúdo da postagem..." required></textarea>
+                </div>
+                
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-warning btn-lg rounded-pill fw-bold">
+                        Atualizar Postagem
+                    </button>
+                    <a href="/ver" class="btn btn-light rounded-pill">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{end}}
