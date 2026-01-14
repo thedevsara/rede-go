@@ -1,0 +1,6 @@
+# Marcar arquivos HTML e CSS como documentação ou gerados para não contarem na estatística
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+
+# Garantir que Go seja a estrela do projeto
+*.go linguist-detectable=true
