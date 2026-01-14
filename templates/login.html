@@ -1,0 +1,52 @@
+{{define "content"}}
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+    <div style="max-width: 400px; width: 100%;" class="card post-card p-4">
+        
+       <div class="text-center mb-4">
+    <div class="avatar-neon mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+        <i class="bi bi-shield-lock-fill"></i>
+    </div>
+    <h2 class="fw-bold m-0 text-white" style="letter-spacing: -1px; text-shadow: 0 0 10px rgba(255,255,255,0.2);">
+        Login Go
+    </h2>
+    <p class="text-secondary small mt-2">Access your account to continue.</p>
+</div>
+
+        {{if .}}
+            <div class="alert alert-danger bg-danger text-white border-0 rounded-4 small py-2 text-center mb-3">
+                {{.}}
+            </div>
+        {{end}}
+
+        <form action="/login" method="POST">
+            <div class="mb-3">
+                <label class="form-label small fw-bold text-secondary ms-2">Username</label>
+                <input type="text" name="username" 
+                       class="form-control bg-dark border-0 text-white rounded-pill px-4 py-2" 
+                       placeholder="Your username" required 
+                       style="background: rgba(14, 45, 62, 0.2) !important;">
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label small fw-bold text-secondary ms-2">Password</label>
+                <input type="password" name="password" 
+                       class="form-control bg-dark border-0 text-white rounded-pill px-4 py-2" 
+                       placeholder="Your password" required
+                       style="background: rgba(0,0,0,0.2) !important;">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold mb-3" 
+                    style="background: var(--accent-purple); border: none; box-shadow: 0 5px 15px rgba(157, 89, 255, 0.3);">
+                Sign In
+            </button>
+
+            <div class="text-center mt-3 pt-3 border-top border-secondary">
+                <p class="small text-secondary mb-1">Don't have an account yet?</p>
+                <a href="/cadastro" class="text-decoration-none fw-bold" style="color: var(--accent-blue);">
+                    Register now
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{{end}}

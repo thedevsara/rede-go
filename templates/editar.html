@@ -1,28 +1,43 @@
 {{define "content"}}
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card shadow-sm border-0 rounded-4 p-4 mt-5">
-            <h2 class="fw-bold mb-4 text-center text-primary">Editar Postagem</h2>
-            
-            <form action="/editar?id={{.}}" method="POST">
-                <div class="mb-3">
-                    <label class="form-label fw-bold">Seu Nome</label>
-                    <input type="text" name="nome" class="form-control form-control-lg" placeholder="Altere seu nome" required>
-                </div>
-                
-                <div class="mb-3">
-                    <label class="form-label fw-bold">Mensagem</label>
-                    <textarea name="mensagem" class="form-control" rows="5" placeholder="Escreva o novo conteúdo da postagem..." required></textarea>
-                </div>
-                
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-warning btn-lg rounded-pill fw-bold">
-                        Atualizar Postagem
-                    </button>
-                    <a href="/ver" class="btn btn-light rounded-pill">Cancelar</a>
-                </div>
-            </form>
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 85vh;">
+    <div style="max-width: 500px; width: 100%;" class="card post-card p-4">
+        
+        <div class="text-center mb-4">
+            <div class="avatar-neon mx-auto mb-3" style="width: 55px; height: 55px; font-size: 1.3rem;">
+                <i class="bi bi-pencil-square"></i>
+            </div>
+            <h2 class="fw-bold m-0" style="letter-spacing: -1px;">Edit Post</h2>
+            <p class="text-secondary small mt-2">Adjust your content and keep it fresh.</p>
         </div>
+
+        <form action="/editar?id={{.}}" method="POST">
+            <div class="mb-3">
+                <label class="form-label small fw-bold text-secondary ms-2">Display Name</label>
+                <input type="text" name="nome" 
+                       class="form-control bg-dark border-0 text-white rounded-pill px-4 py-2" 
+                       placeholder="Change your display name" required
+                       style="background: rgba(0,0,0,0.2) !important;">
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label small fw-bold text-secondary ms-2">Message Content</label>
+                <textarea name="mensagem" 
+                          class="form-control bg-dark border-0 text-white rounded-4 px-3 py-3" 
+                          rows="5" placeholder="Write the new content..." required
+                          style="background: rgba(0,0,0,0.2) !important; resize: none;"></textarea>
+            </div>
+
+            <div class="d-grid gap-3">
+                <button type="submit" class="btn btn-primary rounded-pill py-2 fw-bold" 
+                        style="background: var(--accent-purple); border: none; box-shadow: 0 5px 15px rgba(157, 89, 255, 0.3);">
+                    Save Changes
+                </button>
+                
+                <a href="/ver" class="btn btn-link text-secondary text-decoration-none small text-center">
+                    Cancel and return
+                </a>
+            </div>
+        </form>
     </div>
 </div>
 {{end}}

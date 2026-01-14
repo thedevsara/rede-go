@@ -1,16 +1,35 @@
 {{define "content"}}
-<div class="card p-4 shadow-sm">
-    <h2>Nova Mensagem</h2>
-    <form action="/form" method="POST">
-        <div class="mb-3">
-            <label class="form-label">Nome</label>
-            <input type="text" name="nome_usuario" class="form-control" required>
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 85vh;">
+    <div style="max-width: 500px; width: 100%;" class="card post-card p-4">
+        
+        <div class="text-center mb-4">
+            <div class="avatar-neon mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                <i class="bi bi-plus-lg"></i>
+            </div>
+            <h2 class="fw-bold m-0" style="letter-spacing: -1px;">New Post</h2>
+            <p class="text-secondary small mt-2">What's on your mind today?</p>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Mensagem</label>
-            <textarea name="mensagem" class="form-control" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Salvar</button>
-    </form>
+
+        <form action="/form" method="POST">
+            <div class="mb-4">
+                <label class="form-label small fw-bold text-secondary ms-2">Your message</label>
+                <textarea name="mensagem" 
+                          class="form-control bg-dark border-0 text-white rounded-4 px-3 py-3" 
+                          rows="5" placeholder="Share something interesting with the community..." required
+                          style="background: rgba(0,0,0,0.2) !important; resize: none;"></textarea>
+            </div>
+
+            <div class="d-grid gap-3">
+                <button type="submit" class="btn btn-primary rounded-pill py-2 fw-bold" 
+                        style="background: var(--accent-purple); border: none; box-shadow: 0 5px 15px rgba(157, 89, 255, 0.3);">
+                    Publish Post
+                </button>
+                
+                <a href="/ver" class="btn btn-link text-secondary text-decoration-none small text-center">
+                    Back to Feed
+                </a>
+            </div>
+        </form>
+    </div>
 </div>
 {{end}}
