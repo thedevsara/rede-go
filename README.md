@@ -1,4 +1,4 @@
-# 🚀 Go Social - Premium Dark Edition
+# 🚀 Go Social 
 
 Uma rede social  desenvolvido em **Go (Golang)**, focado em alta performance, segurança e uma interface imersiva.
 
