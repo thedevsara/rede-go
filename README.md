@@ -5,12 +5,6 @@ Uma rede social  desenvolvido em **Go (Golang)**, focado em alta performance, se
 ## 📱 Visão Geral
 O **Go Social** permite partilhar pensamentos em tempo real, interagir com curtidas únicas e comentar publicações. O design segue a estética *Glassmorphism* e *Deep UI*, proporcionando uma experiência moderna e responsiva.
 
-## ✨ Funcionalidades
-- **Autenticação**: Login e Registo com **Bcrypt** e sessões **JWT**.
-- **Fuso Horário**: Datas ajustadas automaticamente para o horário de Brasília (-3h).
-- **Engajamento**: Curtidas únicas por utilizador e sistema de comentários.
-- **UI/UX**: Design Dark mode com efeitos de vidro e navegação flutuante.
-
 ## 🛠️ Tecnologias
 - **Backend**: Go (Golang)
 - **Base de Dados**: PostgreSQL
