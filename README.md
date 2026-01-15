@@ -1,6 +1,6 @@
 # 🚀 Go Social - Premium Dark Edition
 
-Um sistema de rede social minimalista e futurista desenvolvido em **Go (Golang)**, focado em alta performance, segurança e uma interface imersiva.
+Uma rede social  desenvolvido em **Go (Golang)**, focado em alta performance, segurança e uma interface imersiva.
 
 ## 📱 Visão Geral
 O **Go Social** permite partilhar pensamentos em tempo real, interagir com curtidas únicas e comentar publicações. O design segue a estética *Glassmorphism* e *Deep UI*, proporcionando uma experiência moderna e responsiva.
